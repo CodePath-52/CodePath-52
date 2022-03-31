@@ -1,4 +1,7 @@
-# DocsRadar
+Original App Design Project - README Template
+===
+
+# APP_NAME_HERE
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -21,7 +24,7 @@ An app that will look for the doctors or clinics nearby to help people look for 
 - **Story: How compelling is the story around this app once completed?**
     - How clear is the value of this app to your audience?
     - How well would your friends or peers respond to this product idea?
-    - Answer: 
+    - Answer: Finding an appropriate doctor for symptoms can be difficult with the relevant information sometimes requiring looking at many different areas. This apps serves to streamline that information into one place.
 - **Market: How large or unique is the market for this app?**
     - What's the size and scale of your potential user base?
     - Does this app provide huge value to a niche group of people?
@@ -92,8 +95,7 @@ An app that will look for the doctors or clinics nearby to help people look for 
 * Rate
     * &rarr; Stream
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://i.imgur.com/nKWQaGD.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
@@ -102,8 +104,54 @@ An app that will look for the doctors or clinics nearby to help people look for 
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+
+#### User
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | userId      | String   | unique id for the user (default field) |
+   | symptoms        | array of strings| list of symptoms |
+   | age       | Integer   | user's age|
+   | sex | String   | user's sex |
+   | username | String | username |
+   | password | String | password |
+
+#### Doctor
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | doctorId      | String   | unique id for the doctor (default field) |
+   | location        | dictionary of doubles | {'latitude':..., 'longtitude':...} |
+   | rating         | Float     | average rating of doctor |
+   | sex       | String   | doctor's sex |
+   | type | String   | type of doctor |
+   | phoneNumber    | String   | phone number of doctor |
+   | hours     | array of paired DateTimes | availability of doctor |
+   | website     | String | website of doctor for more information (optional) |
+   
+#### Rating
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | doctor      | Pointer to Doctor   | Doctor being rated |
+   | user        | Pointer to User | User being rated (object uniquely identified by doctor-user pair) |
+   | rating         | Float     | rating of doctor |
+   | title       | String   | title of rating |
+   | description | String   | description of rating |
+
 ### Networking
-- [Add list of network requests by screen ]
+#### Login Screen
+* (Create/POST) Login user given username and password
+#### Register Screen
+* (Create/POST) Create a new user with age, sex, symptoms, username, password, etc.
+#### Stream Screen
+* (Read/GET) Get list of doctors near the user
+* (Read/GET) Get list of doctors near the user with applied filters/preferences
+#### Rate Screen
+* (Create/POST) Create a new rating
+#### User Profile Screen
+* (Update/PUT) Update user with new information
+* (Delete) Delete existing ratings
+
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
