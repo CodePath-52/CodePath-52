@@ -95,7 +95,7 @@ An app that will look for the doctors or clinics nearby to help people look for 
 * Rate
     * &rarr; Stream
 ## Wireframes
-<img src="https://i.imgur.com/nKWQaGD.jpg" width=600>
+<img src="https://user-images.githubusercontent.com/50003319/161401510-436bf12a-2b2d-4072-9d4b-315f2af2806c.jpeg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
