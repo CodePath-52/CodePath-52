@@ -1,0 +1,6 @@
+framework module Pods_CodePath_52 {
+  umbrella header "Pods-CodePath-52-umbrella.h"
+
+  export *
+  module * { export * }
+}
