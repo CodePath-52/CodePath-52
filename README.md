@@ -46,8 +46,8 @@ An app that will look for the doctors or clinics nearby to help people look for 
 
 **Required Must-have Stories**
 
-* [ ] Users can log in and out off the app
-* [ ] App will remember login even after the app closes
+* [x] Users can log in and out off the app
+* [x] App will remember login even after the app closes
 * [ ] Users can select the type of doctor they're looking for (dermatologist, general physician, pediatrician, etc.)
 * [ ] App will display contact information of local doctors of the appropriate type (in the local area)
 
@@ -62,10 +62,10 @@ An app that will look for the doctors or clinics nearby to help people look for 
 ### 2. Screen Archetypes
 
 * Login
-   * Prompt user to enter username and password
-   * Link to register if new user
-   * Verify username and password
-   * Show appropriate error message if needed (e.g. wrong password, username doesn't exist)
+   * [x] Prompt user to enter username and password
+   * [x] Link to register if new user
+   * [x] Verify username and password
+   * [ ] Show appropriate error message if needed (e.g. wrong password, username doesn't exist)
 * Register
    * Prompt user to enter username and password
    * Confirm password
