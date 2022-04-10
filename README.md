@@ -51,6 +51,7 @@ An app that will look for the doctors or clinics nearby to help people look for 
 * [ ] Users can select the type of doctor they're looking for (dermatologist, general physician, pediatrician, etc.)
 * [ ] App will display contact information of local doctors of the appropriate type (in the local area)
 
+
 **Optional Nice-to-have Stories**
 
 * [ ] Infinite scroll -- the lower you scroll, the farther away the doctors get.
@@ -94,6 +95,11 @@ An app that will look for the doctors or clinics nearby to help people look for 
     * &rarr; Rate if tap on doctor's table view cell
 * Rate
     * &rarr; Stream
+
+## GIFs
+### Login
+<img src="https://user-images.githubusercontent.com/50003319/162596228-fe710681-f979-4dfc-8b7b-fbeabb7de915.gif" width=250>
+
 ## Wireframes
 <img src="https://user-images.githubusercontent.com/50003319/161401510-436bf12a-2b2d-4072-9d4b-315f2af2806c.jpeg" width=600>
 
