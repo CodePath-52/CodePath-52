@@ -68,10 +68,10 @@ An app that will look for the doctors or clinics nearby to help people look for 
    * [x] Verify username and password
    * [ ] Show appropriate error message if needed (e.g. wrong password, username doesn't exist)
 * Register
-   * Prompt user to enter username and password
-   * Confirm password
-   * Verify username and password before creating new user
-   * Show appropriate error message if needed (e.g. passwords don't match, username already exists)
+   * [x] Prompt user to enter username and password
+   * [x] Confirm password
+   * [ ] Verify username and password before creating new user
+   * [x] Show appropriate error message if needed (e.g. passwords don't match, username already exists)
 * Stream
     * User can view a list of doctors near them
 * Rate
@@ -99,6 +99,10 @@ An app that will look for the doctors or clinics nearby to help people look for 
 ## GIFs
 ### Login
 <img src="https://user-images.githubusercontent.com/50003319/162596228-fe710681-f979-4dfc-8b7b-fbeabb7de915.gif" width=250>
+
+### Sign Up
+<img src="https://i.imgur.com/ZAu8GHn.gif" width=250>
+
 
 ## Wireframes
 <img src="https://user-images.githubusercontent.com/50003319/161401510-436bf12a-2b2d-4072-9d4b-315f2af2806c.jpeg" width=600>
