@@ -59,6 +59,14 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 		present(picker, animated: true, completion: nil)
 	}
 	
+	@IBOutlet weak var ageLabel: UILabel!
+	@IBOutlet weak var sexLabel: UILabel!
+	@IBOutlet weak var symptomsLabel: UILabel!
+	
+	@IBAction func editSymptomsButton(_ sender: Any) {
+		self.performSegue(withIdentifier: "editSymptomsSegue", sender: nil)
+	}
+	
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 		let image = info[.editedImage] as! UIImage
 		let size = CGSize(width: 300, height: 300)
@@ -71,18 +79,24 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		// Do any additional setup after loading the view.
+		let user = PFUser.current() as! PFUser
+		let ageNum = user["age"] as! Int
+		
+		self.ageLabel.text = String(ageNum);
+		self.sexLabel.text = user["sex"] as? String
+		let symptomList = user["symptoms"] as? [String]
+		
+		var symptomString = "";
+		if symptomList != nil {
+			for i in 1...symptomList!.count {
+				if i != symptomList!.count {
+					symptomString = "\(symptomString)\(symptomList![i-1]), "
+				}
+				else {
+					symptomString = "\(symptomString)\(symptomList![i-1])"
+				}
+			}
+			self.symptomsLabel.text = symptomString
+		}
 	}
-	
-	
-	/*
-	 // MARK: - Navigation
-	 
-	 // In a storyboard-based application, you will often want to do a little preparation before navigation
-	 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-	 // Get the new view controller using segue.destination.
-	 // Pass the selected object to the new view controller.
-	 }
-	 */
-	
 }
