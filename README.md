@@ -46,10 +46,11 @@ An app that will look for the doctors or clinics nearby to help people look for 
 
 **Required Must-have Stories**
 
-* [ ] Users can log in and out off the app
-* [ ] App will remember login even after the app closes
+* [x] Users can log in and out off the app
+* [x] App will remember login even after the app closes
 * [ ] Users can select the type of doctor they're looking for (dermatologist, general physician, pediatrician, etc.)
 * [ ] App will display contact information of local doctors of the appropriate type (in the local area)
+
 
 **Optional Nice-to-have Stories**
 
@@ -62,10 +63,10 @@ An app that will look for the doctors or clinics nearby to help people look for 
 ### 2. Screen Archetypes
 
 * Login
-   * Prompt user to enter username and password
-   * Link to register if new user
-   * Verify username and password
-   * Show appropriate error message if needed (e.g. wrong password, username doesn't exist)
+   * [x] Prompt user to enter username and password
+   * [x] Link to register if new user
+   * [x] Verify username and password
+   * [ ] Show appropriate error message if needed (e.g. wrong password, username doesn't exist)
 * Register
    * Prompt user to enter username and password
    * Confirm password
@@ -94,6 +95,11 @@ An app that will look for the doctors or clinics nearby to help people look for 
     * &rarr; Rate if tap on doctor's table view cell
 * Rate
     * &rarr; Stream
+
+## GIFs
+### Login
+<img src="https://user-images.githubusercontent.com/50003319/162596228-fe710681-f979-4dfc-8b7b-fbeabb7de915.gif" width=250>
+
 ## Wireframes
 <img src="https://user-images.githubusercontent.com/50003319/161401510-436bf12a-2b2d-4072-9d4b-315f2af2806c.jpeg" width=600>
 

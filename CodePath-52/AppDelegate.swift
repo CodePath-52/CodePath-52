@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let keys = dict { // checks for not null
                 let parseConfig = ParseClientConfiguration {
                             $0.applicationId = keys["applicationId"] as? String
-                            $0.clientKey = keys["clientKey"] as?	 String
+                            $0.clientKey = keys["clientKey"] as? String
                             $0.server = "https://parseapi.back4app.com"
                     }
                 Parse.initialize(with: parseConfig)
