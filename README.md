@@ -72,29 +72,32 @@ An app that will look for the doctors or clinics nearby to help people look for 
    * [x] Confirm password
    * [ ] Verify username and password before creating new user
    * [x] Show appropriate error message if needed (e.g. passwords don't match, username already exists)
-* Stream
+* Home
     * User can view a list of doctors near them
 * Rate
     * Prompt user to add their rating out of 5 stars, price range for the doctor, maybe a comment - present modally.
 * User Profile
-    * Prompt user to enter age, sex, illness
+	* [x] Display user age, sex, and symptoms
+	* [x] Display logout button
+	* [x] Allow user to edit symptoms
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
-* Home
-* User Profile
+	* [x] Home screen
+   * [x] User profile screen
 
 **Flow Navigation** (Screen to Screen)
 
 * Login
-    * &rarr; User Profile
+    * &rarr; Home
+    * &rarr; Register
 * Register
-    * &rarr; User Profile
-* Stream
+    * &rarr; Home
+* Home
     * &rarr; Rate if tap on doctor's table view cell
 * Rate
-    * &rarr; Stream
+    * &rarr; Home
 
 ## GIFs
 ### Login
@@ -154,7 +157,7 @@ An app that will look for the doctors or clinics nearby to help people look for 
 * (Create/POST) Login user given username and password
 #### Register Screen
 * (Create/POST) Create a new user with age, sex, symptoms, username, password, etc.
-#### Stream Screen
+#### Home Screen
 * (Read/GET) Get list of doctors near the user
 * (Read/GET) Get list of doctors near the user with applied filters/preferences
 #### Rate Screen

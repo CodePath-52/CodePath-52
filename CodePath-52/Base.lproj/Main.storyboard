@@ -30,7 +30,7 @@
         <scene sceneID="Nlv-fH-oKl">
             <objects>
                 <navigationController id="8d5-7e-MOd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="profile_tab" id="1ai-A3-ggK"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile_tab" selectedImage="profile_tab" id="1ai-A3-ggK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rJa-fI-FtB">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -140,7 +140,7 @@
                         <viewLayoutGuide key="safeArea" id="v5h-GC-lAv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Homepage" selectedImage="feed_tab" id="h6R-Y6-jnE"/>
+                    <tabBarItem key="tabBarItem" title="Homepage" image="feed_tab" selectedImage="feed_tab" id="h6R-Y6-jnE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPW-pu-Ebp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -149,7 +149,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="eV9-t2-maz">
             <objects>
-                <viewController id="jab-02-w2a" customClass="SignUpViewController" sceneMemberID="viewController">
+                <viewController id="jab-02-w2a" customClass="SignUpViewController" customModule="CodePath_52" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5vX-iB-eAT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
