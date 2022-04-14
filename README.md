@@ -85,7 +85,7 @@ An app that will look for the doctors or clinics nearby to help people look for 
 
 **Tab Navigation** (Tab to Screen)
 	* [x] Home screen
-   * [x] User profile screen
+	* [x] User profile screen
 
 **Flow Navigation** (Screen to Screen)
 
@@ -103,12 +103,15 @@ An app that will look for the doctors or clinics nearby to help people look for 
 ### Login
 <img src="https://user-images.githubusercontent.com/50003319/162596228-fe710681-f979-4dfc-8b7b-fbeabb7de915.gif" width=250>
 
-### Sign Up
+### Signup
 <img src="https://i.imgur.com/ZAu8GHn.gif" width=250>
+
+### User Profile
+<img src="https://user-images.githubusercontent.com/50003319/163290089-f586d8f3-463f-4985-a24b-1a164a42578e.gif" width=250>
 
 
 ## Wireframes
-<img src="https://user-images.githubusercontent.com/50003319/161401510-436bf12a-2b2d-4072-9d4b-315f2af2806c.jpeg" width=600>
+<img src="https://user-images.githubusercontent.com/50003319/163289773-f760ee21-9acd-46fc-9913-561d27348019.jpg" width=500>
 
 ### [BONUS] Digital Wireframes & Mockups
 
