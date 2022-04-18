@@ -72,8 +72,8 @@ FindDocs will look for the doctors or clinics nearby to help people browse throg
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
-	* [x] Home screen
-	* [x] User profile screen
+* [x] Home screen
+* [x] User profile screen
 
 **Flow Navigation** (Screen to Screen)
 
