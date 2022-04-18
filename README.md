@@ -1,7 +1,7 @@
 Original App Design Project - README Template
 ===
 
-# APP_NAME_HERE
+# FindDocs 🩺
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -11,34 +11,22 @@ Original App Design Project - README Template
 
 ## Overview
 ### Description
-An app that will look for the doctors or clinics nearby to help people look for the appropriate doctors and make doctor appointments with ease. User can rate their doctors and the ratings are accessible to all the users.
+FindDocs will look for the doctors or clinics nearby to help people browse throguh available doctors and make doctor appointments with ease. User can rate their doctors and the ratings are accessible to other users.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
 - **Category**
     - Medical
 - **Mobile: How uniquely mobile is the product experience?**
-    - What makes your app more than a glorified website?
-    - Try for 2 or more of these: maps, camera, location, audio, sensors, push, real-time, etc
-    - Answer: With user's location, we can recommend them to the nearby doctors 
+    - With user's mobile phone location, we can recommend them to the nearby doctors 
 - **Story: How compelling is the story around this app once completed?**
-    - How clear is the value of this app to your audience?
-    - How well would your friends or peers respond to this product idea?
-    - Answer: Finding an appropriate doctor for symptoms can be difficult with the relevant information sometimes requiring looking at many different areas. This apps serves to streamline that information into one place.
+    - Finding an appropriate doctor for symptoms can be difficult with the relevant information sometimes requiring looking at many different areas. This apps serves to streamline that information into one place.
 - **Market: How large or unique is the market for this app?**
-    - What's the size and scale of your potential user base?
-    - Does this app provide huge value to a niche group of people?
-    - Do you have a well-defined audience of people for this app?
-    - Answer: This app doesn't have a targeted group
+    - The app's target group is adult.
 - **Habit: How habit-forming or addictive is this app?**
-    - How frequently would an average user open and use this app?
-    - Does an average user just consume your app or do they create?
-    - Answer: This app is not addictive as people only use it in need of medical service.
+    - This app is not addictive as people only use it in need of medical service.
 - **Scope: How well-formed is the scope for this app?**
-    - How technically challenging will it be to complete this app by the end of the program?
-    - Is a stripped-down version of this app still interesting to build?
-    - How clearly defined is the product you want to build?
-    - Answer: It will be fairly challenging to gather doctors' information
+    - We believe the app provide practical values even in its stripped down version.
 
 ## Product Spec
 
@@ -46,9 +34,9 @@ An app that will look for the doctors or clinics nearby to help people look for 
 
 **Required Must-have Stories**
 
-* [x] Users can log in and out off the app
+* [x] User can log in and out off the app
 * [x] App will remember login even after the app closes
-* [ ] Users can select the type of doctor they're looking for (dermatologist, general physician, pediatrician, etc.)
+* [ ] User can select the type of doctor they're looking for (dermatologist, general physician, pediatrician, etc.)
 * [ ] App will display contact information of local doctors of the appropriate type (in the local area)
 
 
@@ -73,9 +61,9 @@ An app that will look for the doctors or clinics nearby to help people look for 
    * [ ] Verify username and password before creating new user
    * [x] Show appropriate error message if needed (e.g. passwords don't match, username already exists)
 * Home
-    * User can view a list of doctors near them
+	* [ ] User can view a list of doctors near them
 * Rate
-    * Prompt user to add their rating out of 5 stars, price range for the doctor, maybe a comment - present modally.
+    * [ ] Prompt user to add their rating out of 5 stars, price range for the doctor, maybe a comment - present modally.
 * User Profile
 	* [x] Display user age, sex, and symptoms
 	* [x] Display logout button
@@ -99,7 +87,10 @@ An app that will look for the doctors or clinics nearby to help people look for 
 * Rate
     * &rarr; Home
 
-## GIFs
+## Wireframes
+<img src="https://user-images.githubusercontent.com/50003319/163289773-f760ee21-9acd-46fc-9913-561d27348019.jpg" width=500>
+
+## Prototypes
 ### Login
 <img src="https://user-images.githubusercontent.com/50003319/162596228-fe710681-f979-4dfc-8b7b-fbeabb7de915.gif" width=250>
 
@@ -110,15 +101,7 @@ An app that will look for the doctors or clinics nearby to help people look for 
 <img src="https://user-images.githubusercontent.com/50003319/163290089-f586d8f3-463f-4985-a24b-1a164a42578e.gif" width=250>
 
 
-## Wireframes
-<img src="https://user-images.githubusercontent.com/50003319/163289773-f760ee21-9acd-46fc-9913-561d27348019.jpg" width=500>
-
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
-
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
 
 #### User
@@ -161,13 +144,17 @@ An app that will look for the doctors or clinics nearby to help people look for 
 #### Register Screen
 * (Create/POST) Create a new user with age, sex, symptoms, username, password, etc.
 #### Home Screen
-* (Read/GET) Get list of doctors near the user
-* (Read/GET) Get list of doctors near the user with applied filters/preferences
+* (Read/GET) Get list of doctors near the user with symptoms
 #### Rate Screen
 * (Create/POST) Create a new rating
 #### User Profile Screen
 * (Update/PUT) Update user with new information
 * (Delete) Delete existing ratings
+
+### Additional APIs
+* Google Maps
+	* add endpoints
+* Symptom Checker
 
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]

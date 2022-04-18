@@ -396,25 +396,52 @@
             </objects>
             <point key="canvasLocation" x="-52" y="-437"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Symptoms View Controller-->
         <scene sceneID="hTu-rs-Wzj">
             <objects>
-                <viewController id="g8w-uo-c4u" sceneMemberID="viewController">
+                <viewController id="g8w-uo-c4u" customClass="EditSymptomsViewController" customModule="CodePath_52" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cXu-6P-L0h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter symptoms:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjf-h1-xoa">
-                                <rect key="frame" x="101" y="193" width="129" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter updated symptoms (separate with commas):" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjf-h1-xoa">
+                                <rect key="frame" x="107" y="194" width="200" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="4qW-k0-e2P"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgV-b2-LHW">
+                                <rect key="frame" x="107" y="260" width="200" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcP-jQ-2kb">
+                                <rect key="frame" x="172" y="319" width="70" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="g8w-uo-c4u" eventType="touchUpInside" id="TXA-Bd-U0M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zqh-Uv-EN1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sgV-b2-LHW" firstAttribute="leading" secondItem="yjf-h1-xoa" secondAttribute="leading" id="0z6-Vf-9L8"/>
+                            <constraint firstItem="yjf-h1-xoa" firstAttribute="top" secondItem="zqh-Uv-EN1" secondAttribute="top" constant="150" id="3fx-aP-efb"/>
+                            <constraint firstItem="sgV-b2-LHW" firstAttribute="top" secondItem="yjf-h1-xoa" secondAttribute="bottom" constant="25" id="Oqu-ow-bj8"/>
+                            <constraint firstItem="sgV-b2-LHW" firstAttribute="trailing" secondItem="yjf-h1-xoa" secondAttribute="trailing" id="mZX-N7-d56"/>
+                            <constraint firstItem="yjf-h1-xoa" firstAttribute="centerX" secondItem="cXu-6P-L0h" secondAttribute="centerX" id="pSb-9I-ahb"/>
+                            <constraint firstItem="AcP-jQ-2kb" firstAttribute="centerX" secondItem="cXu-6P-L0h" secondAttribute="centerX" id="wgG-Wm-M3x"/>
+                            <constraint firstItem="AcP-jQ-2kb" firstAttribute="top" secondItem="sgV-b2-LHW" secondAttribute="bottom" constant="25" id="z3L-3e-Kl3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="symptomsField" destination="sgV-b2-LHW" id="1RW-8v-HtX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sMv-ya-1VB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

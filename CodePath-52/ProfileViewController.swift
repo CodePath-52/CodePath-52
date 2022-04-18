@@ -2,9 +2,14 @@ import UIKit
 import AlamofireImage
 import Parse
 
-class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+// for geolocation
+import MapKit
+import CoreLocation
+
+class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate{
 	
-	var imageSet = false
+	let locationManager = CLLocationManager()
+
 	@IBOutlet weak var profilePic: UIImageView!
 	@IBAction func onSubmitButton(_ sender: Any) {
 		
@@ -18,8 +23,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 		
 		user.saveInBackground{(success, error) in
 			if success {
-				// want to return to the feed view
-				self.imageSet = true
 				print("Profile picture saved!")
 			}
 			else {
@@ -35,13 +38,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 		// get window from sceneDelegate
 		guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate else {return}
 		delegate.window?.rootViewController = loginViewController
-	}
-	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-		if imageSet {
-			self.tabBarController?.selectedIndex = 1
-		}
 	}
 	
 	@IBAction func onCameraButton(_ sender: Any) {
@@ -76,10 +72,62 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 		dismiss(animated: true, completion: nil)
 	}
 	
+	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+		guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+		print("locations = \(locValue.latitude) \(locValue.longitude)")
+		guard let location: CLLocation = manager.location else { return }
+		fetchCityAndCountry(from: location) { city, country, error in
+			guard let city = city, let country = country, error == nil else { return }
+			print(city + ", " + country)
+		}
+	}
+	
+	func fetchCityAndCountry(from location: CLLocation, completion: @escaping (_ city: String?, _ country:  String?, _ error: Error?) -> ()) {
+		CLGeocoder().reverseGeocodeLocation(location) { placemarks, error in
+			completion(placemarks?.first?.locality,
+					   placemarks?.first?.country,
+					   error)
+		}
+	}
+	
+	@objc func showNewSymptoms() {
+		let user = PFUser.current()!
+		
+		let symptomList = user["symptoms"] as? [String]
+		
+		var symptomString = "";
+		if symptomList != nil {
+			for i in 1...symptomList!.count {
+				if i != symptomList!.count {
+					symptomString = "\(symptomString)\(symptomList![i-1]), "
+				}
+				else {
+					symptomString = "\(symptomString)\(symptomList![i-1])"
+				}
+			}
+			self.symptomsLabel.text = symptomString
+		}
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		// super.viewDidAppear(animated)
+		DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+			self.showNewSymptoms()
+		}
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		let user = PFUser.current() as! PFUser
+		locationManager.requestAlwaysAuthorization()
+		// locationManager.requestWhenInUseAuthorization()
+		if CLLocationManager.locationServicesEnabled() {
+			locationManager.delegate = self
+			locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+			locationManager.startUpdatingLocation()
+		}
+		
+		let user = PFUser.current()!
 		let ageNum = user["age"] as! Int
 		
 		self.ageLabel.text = String(ageNum);
