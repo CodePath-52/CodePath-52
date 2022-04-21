@@ -100,6 +100,9 @@ FindDocs will look for the doctors or clinics nearby to help people browse throg
 ### User Profile
 <img src="https://user-images.githubusercontent.com/50003319/163290089-f586d8f3-463f-4985-a24b-1a164a42578e.gif" width=250>
 
+### Edit Symptoms
+<img src="https://user-images.githubusercontent.com/50003319/164349752-f3fbdeb9-e7fe-44d9-a9b3-451f19a92208.gif" width=250>
+
 
 ## Schema 
 ### Models
