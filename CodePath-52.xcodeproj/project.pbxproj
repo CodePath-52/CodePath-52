@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D67D897280FF16900A21401 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67D896280FF16900A21401 /* RatingViewController.swift */; };
+		2D67D8992812796800A21401 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67D8982812796800A21401 /* ReviewCell.swift */; };
 		2DA219822806B4A8000339CB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA219812806B4A8000339CB /* SignUpViewController.swift */; };
 		4503DAC6280255B300475B29 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503DAC5280255B300475B29 /* ProfileViewController.swift */; };
 		45533A24280798C8003D7668 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45533A23280798C8003D7668 /* LoginViewController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D67D896280FF16900A21401 /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
+		2D67D8982812796800A21401 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		2DA219812806B4A8000339CB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4503DAC5280255B300475B29 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		45533A23280798C8003D7668 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 				5805EB42280104AC0094547A /* Assets.xcassets */,
 				5805EB44280104AC0094547A /* LaunchScreen.storyboard */,
 				5805EB47280104AC0094547A /* Info.plist */,
+				2D67D896280FF16900A21401 /* RatingViewController.swift */,
+				2D67D8982812796800A21401 /* ReviewCell.swift */,
 			);
 			path = "CodePath-52";
 			sourceTree = "<group>";
@@ -219,8 +225,10 @@
 				5805EB3A280104AB0094547A /* AppDelegate.swift in Sources */,
 				4503DAC6280255B300475B29 /* ProfileViewController.swift in Sources */,
 				5805EB3C280104AB0094547A /* SceneDelegate.swift in Sources */,
+				2D67D897280FF16900A21401 /* RatingViewController.swift in Sources */,
 				45533A24280798C8003D7668 /* LoginViewController.swift in Sources */,
 				2DA219822806B4A8000339CB /* SignUpViewController.swift in Sources */,
+				2D67D8992812796800A21401 /* ReviewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

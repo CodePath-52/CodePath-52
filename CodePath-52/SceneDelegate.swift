@@ -23,9 +23,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 			// identify the Main storyboard
 			let main = UIStoryboard(name: "Main", bundle: nil)
 			// get an instance of the navigation controller
-			let tabBarViewController = main.instantiateViewController(withIdentifier: "TabBarViewController")
+			let RatingViewController = main.instantiateViewController(withIdentifier: "RatingViewController")
 			
-			window?.rootViewController = tabBarViewController
+			window?.rootViewController = RatingViewController
 		}
 	}
 
