@@ -16,6 +16,7 @@
 		5805EB43280104AC0094547A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5805EB42280104AC0094547A /* Assets.xcassets */; };
 		5805EB46280104AC0094547A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5805EB44280104AC0094547A /* LaunchScreen.storyboard */; };
 		5805EB4E2802048D0094547A /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5805EB4D2802048D0094547A /* Keys.plist */; };
+		5853E70E2811F077005120AF /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5853E70D2811F077005120AF /* APIHandler.swift */; };
 		61C1CD94B9490C358A6D79D2 /* Pods_CodePath_52.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F856ECEFC9BAE1775F5CA27E /* Pods_CodePath_52.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		5805EB45280104AC0094547A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5805EB47280104AC0094547A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5805EB4D2802048D0094547A /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		5853E70D2811F077005120AF /* APIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		7D9F575646D5FB56B40ECD64 /* Pods-CodePath-52.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodePath-52.release.xcconfig"; path = "Target Support Files/Pods-CodePath-52/Pods-CodePath-52.release.xcconfig"; sourceTree = "<group>"; };
 		F856ECEFC9BAE1775F5CA27E /* Pods_CodePath_52.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodePath_52.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB4DD0520BC6EC18CE91DFA /* Pods-CodePath-52.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodePath-52.debug.xcconfig"; path = "Target Support Files/Pods-CodePath-52/Pods-CodePath-52.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		5805EB38280104AB0094547A /* CodePath-52 */ = {
 			isa = PBXGroup;
 			children = (
+				5853E70D2811F077005120AF /* APIHandler.swift */,
 				5805EB39280104AB0094547A /* AppDelegate.swift */,
 				45533A23280798C8003D7668 /* LoginViewController.swift */,
 				5805EB4D2802048D0094547A /* Keys.plist */,
@@ -219,6 +222,7 @@
 				5805EB3A280104AB0094547A /* AppDelegate.swift in Sources */,
 				4503DAC6280255B300475B29 /* ProfileViewController.swift in Sources */,
 				5805EB3C280104AB0094547A /* SceneDelegate.swift in Sources */,
+				5853E70E2811F077005120AF /* APIHandler.swift in Sources */,
 				45533A24280798C8003D7668 /* LoginViewController.swift in Sources */,
 				2DA219822806B4A8000339CB /* SignUpViewController.swift in Sources */,
 			);
